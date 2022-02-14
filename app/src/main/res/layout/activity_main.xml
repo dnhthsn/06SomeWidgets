@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:fillViewport="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_launcher_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:text="Select the platform you like: "
+                    android:textSize="30dp"
+                    app:layout_constraintLeft_toLeftOf="@id/img_icon"
+                    app:layout_constraintTop_toBottomOf="@id/img_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_Iphone"
+                    android:text="IPhone"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt1"
+                    app:layout_constraintLeft_toLeftOf="@id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_Android"
+                    android:text="Android"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/chk_Iphone"
+                    app:layout_constraintLeft_toLeftOf="@id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_WinDowMobile"
+                    android:text="Window Mobile"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/chk_Android"
+                    app:layout_constraintLeft_toLeftOf="@id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:text="Gender: "
+                    android:textSize="30dp"
+                    app:layout_constraintLeft_toLeftOf="@id/img_icon"
+                    app:layout_constraintTop_toBottomOf="@id/chk_WinDowMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/radio_Male"
+                        android:text="Male"
+                        android:textSize="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt2"
+                        app:layout_constraintLeft_toLeftOf="@id/txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_Female"
+                        android:text="Female"
+                        android:textSize="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/radio_Male"
+                        app:layout_constraintLeft_toLeftOf="@id/txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+
+
+
+                <TextView
+                    android:id="@+id/txt_rate"
+                    android:text="Rate your girl/guy in love with you: "
+                    android:textSize="30dp"
+                    app:layout_constraintLeft_toLeftOf="@id/img_icon"
+                    app:layout_constraintTop_toBottomOf="@id/radio_Female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RatingBar
+                    android:id="@+id/rate_bar"
+                    android:numStars="10"
+                    app:layout_constraintTop_toBottomOf="@id/txt_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_country"
+                    android:text="Your country: "
+                    android:textSize="30dp"
+                    app:layout_constraintTop_toBottomOf="@id/rate_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spn_Country"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_country" />
+
+                <TextView
+                    android:id="@+id/txt_YourUniverse"
+                    android:textSize="30dp"
+                    android:text="Your university: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spn_Universe"
+                    app:layout_constraintTop_toBottomOf="@id/txt_YourUniverse"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_favourite"
+                    android:text="Your favourite: "
+                    android:textSize="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_tennis"
+                    android:textSize="20dp"
+                    android:text="Tennis"
+                    app:layout_constraintTop_toBottomOf="@id/txt_favourite"
+                    app:layout_constraintLeft_toLeftOf="@id/txt_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_running"
+                    android:textSize="20dp"
+                    android:text="Running"
+                    app:layout_constraintTop_toBottomOf="@id/chk_tennis"
+                    app:layout_constraintLeft_toLeftOf="@id/txt_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_swimming"
+                    android:textSize="20dp"
+                    android:text="Swimming"
+                    app:layout_constraintTop_toBottomOf="@id/chk_running"
+                    app:layout_constraintLeft_toLeftOf="@id/txt_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_sleeping"
+                    android:textSize="20dp"
+                    android:text="Sleeping"
+                    app:layout_constraintTop_toBottomOf="@id/chk_swimming"
+                    app:layout_constraintLeft_toLeftOf="@id/txt_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/chk_reading"
+                    android:textSize="20dp"
+                    android:text="Reading"
+                    app:layout_constraintTop_toBottomOf="@id/chk_sleeping"
+                    app:layout_constraintLeft_toLeftOf="@id/txt_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:text="SUBMIT"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/txt_platformKQ"
+                    android:text="Platform: "
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_genderKQ"
+                    android:text="Gender: "
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_rateKQ"
+                    android:text="Rate: "
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_countryKQ"
+                    android:textSize="20dp"
+                    android:text="Country: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_universeKQ"
+                    android:textSize="20dp"
+                    android:text="My university: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_favouriteKQ"
+                    android:textSize="20dp"
+                    android:text="My favourite: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:text="CLEAR"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
