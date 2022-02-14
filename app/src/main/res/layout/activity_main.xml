@@ -200,6 +200,8 @@
                 <Button
                     android:id="@+id/btn_submit"
                     android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_custom"
                     android:layout_width="400dp"
                     android:layout_height="wrap_content"/>
 
